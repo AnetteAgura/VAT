@@ -20,7 +20,7 @@
 <div class="starter">
     <h1>Vat Validation</h1>
 
-    <input type="text" id="vat"> <button id="butn-go" onclick="toggleText()">Check!</button>
+    <input type="text" id="vat"> <button id="btn-go" onclick="toggleText()">Check!</button>
 
     <div id="result" style="display: none">
 
@@ -46,7 +46,7 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <script>
-    $('#butn-go').on('click', function(){
+    $('#btn-go').on('click', function(){
         $.post('http://www.apilayer.net/api/validate?access_key=1a3f784998cf7c7909ffff7b5aaef463&vat_number=' + $('#vat').val(), {}, function(res){
             $('#company_address').text(res.company_address)
             $('#company_name').text(res.company_name)
